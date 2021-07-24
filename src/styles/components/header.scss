@@ -1,0 +1,249 @@
+$headerHeight: em(80, $fz);
+
+.header-wrapper {
+  height: $headerHeight;
+}
+.header {
+  display: flex;
+
+  .logo_btn{
+    background: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .header_logo-img{
+    max-height: 30px;
+  }
+
+  &__logo {
+    height: em(35, $fz);
+    display: block;
+    // height: 100%;
+  }
+  &__logo-img {
+    width: auto;
+    height: 100%;
+    display: block;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: em(-30, $fz);
+  }
+  &__item {
+    margin-left: em(30, $fz);
+    list-style: none;
+    font-weight: 600;
+  }
+  &__link {
+    font-size: em(15, $fz);
+    color: #000;
+    transition: 0.3s;
+
+    &:hover {
+      color: $primary-color;
+    }
+    &.active {
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+  &__func {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+
+    .btn {
+      &__label {
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        padding-left: em(10, $fz);
+      }
+      img {
+        width: em(13, $fz);
+        margin-right: em(10, $fz);
+      }
+    }
+  }
+  &__menu {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    // background: rgba(20, 87, 219, .5);
+    animation: showAnimation .25s ease-out;
+    animation-fill-mode: forwards;
+    margin: 0;
+
+    &--visible {
+      opacity: 1;
+      display: block;
+    }
+
+    .menu-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    &__overlay {
+      position: absolute;
+      left: 0;top: 0;right: 0;bottom: 0;
+      background: rgba(0,0,0,.5);
+      z-index: 1;
+    }
+    &__content-wrapper {
+      background: #fff;
+      // box-shadow: -3px 15px 10px 1px #ccc;
+      height: 100%;
+      display: table;
+      margin-left: auto;
+      position: relative;
+      z-index: 10;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    &__nav {
+      list-style: none;
+      margin-left: -20px;
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      // max-height: 140px;
+      // width: 250px;
+
+      li {
+        margin-left: 20px;
+        margin-top: 5px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        transition: background-color .25s ease-out;
+        padding: 10px 40px;
+
+        img {
+          min-width: 20px;
+          height: 20px;
+          display: block;
+          margin-right: 10px;
+
+          &.icon-home, &.icon-vacancies {
+            min-width: 18px;
+            height: 18px;
+            margin-right: 12px;
+          }
+          &.icon-articles {
+            min-width: 21px;
+            height: 21px;
+            margin-right: 9px;
+          }
+        }
+        a {
+          color: $neutral-primary;
+          font-weight: 600;
+          font-size: 19px;
+          position: relative;
+        }
+
+        &.active {
+          background: rgba(0,0,0,.05);
+        }
+      }
+    }
+    &__bottom {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 40px 30px 40px;
+
+      .header__logo {
+        height: auto;
+        width: 100%;
+        max-width: 130px;
+      }
+      .header__logo-img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__phone {
+      font-size: 14px;
+
+      img {
+        width: 13px !important;
+      }
+    }
+
+    @keyframes showAnimation {
+      0% {
+        opacity: 0;
+        margin-top: 25px;
+      }
+      100% {
+        opacity: 1;
+        margin-top: 45px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    padding: em(24, $fz) em(30, $fz);
+  }
+  @media screen and (max-width: 880px) {
+    &__nav {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .menu-btn {
+      width: 20px;
+      height: 12px;
+
+      span,
+      span::before,
+      span::after {
+        height: 2px;
+      }
+    }
+    .menu-btn--ml {
+      margin-left: em(20, $fz);
+    }
+    &__func {
+      .btn {
+        min-width: auto !important;
+        padding-left: em(15, $fz);
+        padding-right: em(15, $fz);
+      }
+    }
+
+    &__menu {
+      @keyframes showAnimation {
+        0% {
+          opacity: 0;
+          margin-top: 25px;
+        }
+        100% {
+          opacity: 1;
+          margin-top: 35px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $breakpointSmall) {
+    .menu-btn {
+      width: 20px;
+      height: 16px;
+    }
+  }
+}

@@ -1,0 +1,235 @@
+@import "~normalize.css/normalize.css";
+@import '~react-toastify/dist/ReactToastify.css';
+.header-wrapper {
+  height: 5em;
+}
+
+.header {
+  display: flex;
+}
+.header .logo_btn {
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+.header .header_logo-img {
+  max-height: 30px;
+}
+.header__logo {
+  height: 2.1875em;
+  display: block;
+}
+.header__logo-img {
+  width: auto;
+  height: 100%;
+  display: block;
+}
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1.875em;
+}
+.header__item {
+  margin-left: 1.875em;
+  list-style: none;
+  font-weight: 600;
+}
+.header__link {
+  font-size: 0.9375em;
+  color: #000;
+  transition: 0.3s;
+}
+.header__link:hover {
+  color: #1457DB;
+}
+.header__link.active {
+  font-weight: bold;
+  color: #1457DB;
+}
+.header__func {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.header__func .btn__label {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding-left: 0.625em;
+}
+.header__func .btn img {
+  width: 0.8125em;
+  margin-right: 0.625em;
+}
+.header__menu {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  animation: showAnimation 0.25s ease-out;
+  animation-fill-mode: forwards;
+  margin: 0;
+}
+.header__menu--visible {
+  opacity: 1;
+  display: block;
+}
+.header__menu .menu-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.header__menu__overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.header__menu__content-wrapper {
+  background: #fff;
+  height: 100%;
+  display: table;
+  margin-left: auto;
+  position: relative;
+  z-index: 10;
+}
+.header__menu__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.header__menu__nav {
+  list-style: none;
+  margin-left: -20px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.header__menu__nav li {
+  margin-left: 20px;
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.25s ease-out;
+  padding: 10px 40px;
+}
+.header__menu__nav li img {
+  min-width: 20px;
+  height: 20px;
+  display: block;
+  margin-right: 10px;
+}
+.header__menu__nav li img.icon-home, .header__menu__nav li img.icon-vacancies {
+  min-width: 18px;
+  height: 18px;
+  margin-right: 12px;
+}
+.header__menu__nav li img.icon-articles {
+  min-width: 21px;
+  height: 21px;
+  margin-right: 9px;
+}
+.header__menu__nav li a {
+  color: #333;
+  font-weight: 600;
+  font-size: 19px;
+  position: relative;
+}
+.header__menu__nav li.active {
+  background: rgba(0, 0, 0, 0.05);
+}
+.header__menu__bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40px 30px 40px;
+}
+.header__menu__bottom .header__logo {
+  height: auto;
+  width: 100%;
+  max-width: 130px;
+}
+.header__menu__bottom .header__logo-img {
+  width: 100%;
+  height: auto;
+}
+.header__menu__phone {
+  font-size: 14px;
+}
+.header__menu__phone img {
+  width: 13px !important;
+}
+@keyframes showAnimation {
+  0% {
+    opacity: 0;
+    margin-top: 25px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 45px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .header {
+    padding: 1.5em 1.875em;
+  }
+}
+@media screen and (max-width: 880px) {
+  .header__nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .menu-btn {
+    width: 20px;
+    height: 12px;
+  }
+  .header .menu-btn span,
+.header .menu-btn span::before,
+.header .menu-btn span::after {
+    height: 2px;
+  }
+  .header .menu-btn--ml {
+    margin-left: 1.25em;
+  }
+  .header__func .btn {
+    min-width: auto !important;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+  }
+  @keyframes showAnimation {
+    0% {
+      opacity: 0;
+      margin-top: 25px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 35px;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .header .menu-btn {
+    width: 20px;
+    height: 16px;
+  }
+}
+
+.page {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=main.css.map */
