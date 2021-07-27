@@ -1,12 +1,9 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  padding: 0;
-  margin: 0;
   font-family: $mainFont;
-  font-size: 16px;
-  line-height: $mainLineHeight;
   background: $default-color;
 
   @media screen and (max-width: $breakpointLarge) {
@@ -18,121 +15,17 @@ body {
   @media screen and (max-width: $breakpointMiddle) {
     font-size: 11px;
   }
-  // @media screen and (max-width: 440px) {
-  //   font-size: 8px;
-  // }
-}
-a {
-  text-decoration: none;
 }
 
 .null {
-  margin: 0;
   padding: 0;
 }
 
-// wrappers
 .wrapper {
   margin: 0 auto;
   padding: 0 em(30, $fz);
-  max-width: em(1200, $fz);
 
   @media screen and (max-width: 1024px) {
     max-width: em(1000, $fz);
-  }
-}
-// container
-.container {
-  margin: 0 auto;
-  padding: 0 em(30, $fz);
-  max-width: em(1200, $fz);
-
-  @media screen and (max-width: 1024px) {
-    max-width: em(1000, $fz);
-  }
-}
-
-
-// texts
-.title {
-  font-weight: bold;
-  font-size: em(45, $fz);
-  color: $primary-color-second;
-  font-family: $mainFont;
-
-  &--middle {
-    font-weight: bold;
-    font-size: em(34, $fz);
-    color: $primary-color-second;
-  }
-}
-
-
-.primary-color {
-  color: $primary-color;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -15px;
-}
-.col {
-  padding: 0 15px;
-}
-
-.color-transition {
-  transition: color .25s;
-}
-
-.card-shadow {
-  transition: box-shadow .35s ease-out;
-  &:hover {
-    box-shadow: 0 em(15, $fz) em(25, $fz) rgba(0, 25, 66, 0.07);
-  }
-}
-
-// margins
-.no-margin {
-  margin: 0;
-}
-// padding
-.pl {
-  &-15 {
-    padding-left: 15px;
-  }
-}
-
-ul {
-  &.no-list-style {
-    list-style: none;
-  }
-}
-
-.toast-main-container {
-  .Toastify {
-    &__toast {
-      background: #fff;
-      color: $neutral-primary;
-      padding: 8px 15px;
-      border-radius: 10px;
-
-      svg {
-        color: $neutral-primary;
-      }
-    }
-    &__progress-bar {
-      background: rgba(0,0,0,.1);
-    }
-  }
-}
-
-.toast-content {
-  display: flex;
-  align-items: center;
-
-  img.logo-mini {
-    width: 35px;
-    margin-right: 15px;
   }
 }

@@ -5,7 +5,6 @@ $headerHeight: em(80, $fz);
 }
 
 .header {
-  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -143,7 +142,6 @@ $headerHeight: em(80, $fz);
       span::before,
       span::after {
         height: 2px;
-        background-color: $primary-color;
       }
     }
 

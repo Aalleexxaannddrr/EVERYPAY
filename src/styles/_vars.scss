@@ -7,16 +7,16 @@ $fz : $fz_base;
 $mainLineHeight : 1.2;
 
 //Main colors
-$default-color : #F8F8F8;
-$primary-color: #1792C7;
-$primary-color-hover : #124fc9;
-$primary-color-second : #072155;
-$purple-color : #F8669E;
-$purple-color-hover : #e66093;
+$default-color : #ffffff;
+$primary-color: #00B8F0;
+$primary-color-second: #1792C7;
+$gradient: linear-gradient(#1792C7 0%, #00B8F0 100%);
+$input-color: #F3F9FF;
 
 // Neutral Color
 $neutral-primary : #333;
 $neutral-regular : #747474;
+$neutral-secondary : #98a0aa;
 
 // Breakpoins
 $breakpointLarge: 1300px;

@@ -1,0 +1,38 @@
+.review-item {
+  padding: em(15, $fz) em(30, $fz);
+  display: flex;
+  justify-content: space-around;
+
+  &__left {
+    max-width: 450px;
+  }
+
+  &__img {
+    max-height: 500px;
+  }
+
+  &__titles {
+    font-size: em(40, $fz);
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: em(18, $fz);
+  }
+
+  @media screen and (max-width: 768px) {
+    &__titles {
+      font-size: em(48, $fz);
+    }
+  }
+
+  @media screen and (max-width: $breakpointSmall) {
+    &__titles {
+      font-size: em(32, $fz);
+    }
+
+    &__text {
+      font-size: em(16, $fz);
+    }
+  }
+}

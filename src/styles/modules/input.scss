@@ -1,61 +1,14 @@
 .input {
   $fz: 16;
-  // width: em(375, $fz);
-  width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  border-radius: em(11, $fz);
+  border: none;
+  border-radius: em(44, $fz);
   padding: em(15, $fz) em(30, $fz);
-  background: transparent;
+  background-color: $input-color;
   outline: none;
-  transition: 0.3s;
-  font-weight: 500;
+  font-weight: 400;
   font-size: em($fz, $fz_base);
 
-  &:hover, &:focus {
-    border: 1px solid rgba(0, 0, 0, 0.75);
-  }
-  &__input-block {
-    margin-top: em(-45, $fz);
-  }
-  &__input {
-    margin-top: em(45, $fz);
-  }
   &::placeholder {
-    color: rgba(0, 0, 0, 0.25);
-  }
-  &--select {
-    color: rgba(0, 0, 0, 0.25);
-    appearance: none;
-    height: 100%;
-  }
-  &--n {
-    display: flex;
-    align-items: center;
-
-    &__label {
-      font-weight: 500;
-      font-size: em(16, $fz);
-      text-transform: capitalize;
-      color: rgba(0, 0, 0, 0.25);
-      display: block;
-      margin-left: em(14, $fz);
-
-      &.color-primary {
-        color: $neutral-primary;
-      }
-    }
-  }
-  &--textarea {
-    width: 100%;
-    resize: none;
-    height: em(230, $fz);
-  }
-  &--circle {
-    $fz: 16;
-    font-size: em($fz, $fz_base);
-    width: em(203, $fz);
-    letter-spacing: 0.075em;
-    padding: em(10, $fz) em(22, $fz);
-    border-radius: em(50, $fz);
+    color: $primary-color-second;
   }
 }
