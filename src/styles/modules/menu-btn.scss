@@ -1,0 +1,92 @@
+.menu-btn {
+  display: block;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+
+  @media screen and (max-width: 420px) {
+    width: 17px;
+    height: 11px;
+  }
+
+  span,
+  span::before,
+  span::after {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 3px;
+    background-color: $neutral-regular;
+    transition: transform 0.3s, height .15s;
+    border-radius: 2px;
+
+    @media screen and (max-width: 420px) {
+      height: 1px;
+    }
+  }
+  &:hover {
+    span,
+    span::before,
+    span::after {
+      background-color: #000;
+    }
+  }
+  span {
+    width: 100%;
+
+    &::before,
+    &::after {
+      content: '';
+      transition: 0.2s;
+    }
+    &::before {
+      width: 100%;
+      transform: translateY(-8px);
+
+      @media screen and (max-width: 768px) {
+        transform: translateY(-6px);
+      }
+      @media screen and (max-width: 420px) {
+        transform: translateY(-5px);
+      }
+    }
+    &::after {
+      width: 100%;
+      transform: translateY(8px);
+
+      @media screen and (max-width: 768px) {
+        transform: translateY(6px);
+      }
+      @media screen and (max-width: 420px) {
+        transform: translateY(5px);
+      }
+    }
+  }
+  &.active {
+    span {
+      height: 0 !important;
+
+      &:before {
+        transform: rotate(-45deg);
+        width: 100%;
+      }
+      &:after {
+        transform: rotate(45deg);
+        width: 100%;
+      }
+    }
+  }
+  &--ml {
+    margin-left: em(66, $fz);
+  }
+
+  @media (max-width: 880px) {
+    display: block;
+  }
+}

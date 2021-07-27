@@ -1,12 +1,25 @@
+//Font
+$mainFont: 'AvenirNext', sans-serif;
+
 //Size
 $fz_base : 16;
 $fz : $fz_base;
+$mainLineHeight : 1.2;
 
 //Main colors
-$primary-color: #1457DB;
+$default-color : #F8F8F8;
+$primary-color: #1792C7;
+$primary-color-hover : #124fc9;
+$primary-color-second : #072155;
+$purple-color : #F8669E;
+$purple-color-hover : #e66093;
 
 // Neutral Color
 $neutral-primary : #333;
+$neutral-regular : #747474;
 
 // Breakpoins
+$breakpointLarge: 1300px;
+$breakpointUpperMiddle: 1024px;
+$breakpointMiddle: 768px;
 $breakpointSmall: 576px;

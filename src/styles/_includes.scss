@@ -1,6 +1,13 @@
 @import "~normalize.css/normalize.css";
 @import '~react-toastify/dist/ReactToastify.css';
 
+//modules
+@import "./modules/common";
+@import "./modules/btn";
+@import "./modules/menu-btn";
+@import "./modules/review-item";
+@import "./modules/input";
+
 //components
 @import "./components/header";
 @import "./components/page";

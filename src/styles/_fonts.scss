@@ -1,0 +1,8 @@
+@import "mixins";
+
+// AvenirNext:
+@include font-face('AvenirNext', '../assets/fonts/AvenirNext/AvenirNextCyr-Regular', 400, 'normal');
+@include font-face('AvenirNext', '../assets/fonts/AvenirNext/AvenirNextCyr-Italic', 400, italic);
+@include font-face('AvenirNext', '../assets/fonts/AvenirNext/AvenirNextCyr-Medium', 500);
+@include font-face('AvenirNext', '../assets/fonts/AvenirNext/AvenirNextCyr-Demi', 600);
+@include font-face('AvenirNext', '../assets/fonts/AvenirNext/AvenirNextCyr-Bold', 700);
