@@ -1,14 +1,32 @@
 .input {
+  display: flex;
+  justify-content: space-between;
   $fz: 16;
   border: none;
   border-radius: em(44, $fz);
-  padding: em(15, $fz) em(30, $fz);
   background-color: $input-color;
-  outline: none;
   font-weight: 400;
   font-size: em($fz, $fz_base);
 
-  &::placeholder {
-    color: $primary-color-second;
+  &--checked {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--form {
+    max-height: 48px;
+    max-width: 440px;
+  }
+
+  &--email {
+    padding: em(15, $fz) em(30, $fz);
+
+    &::placeholder {
+      color: $primary-color-second;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 }

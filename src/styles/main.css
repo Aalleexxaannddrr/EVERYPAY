@@ -69,6 +69,15 @@ body {
   }
 }
 
+.warning {
+  color: red;
+}
+
+.material-icons {
+  color: #99BA00;
+  margin-right: 10px;
+}
+
 .btn {
   padding: 0.625em;
   cursor: pointer;
@@ -146,9 +155,11 @@ body {
 }
 
 .review-item {
+  height: 100%;
   padding: 0.9375em 1.875em;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .review-item__left {
   max-width: 450px;
@@ -163,12 +174,42 @@ body {
   font-weight: 400;
   font-size: 1.125em;
 }
+@media screen and (max-width: 1025px) {
+  .review-item {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .review-item__img {
+    max-width: 400px;
+    max-height: 300px;
+  }
+}
 @media screen and (max-width: 768px) {
+  .review-item {
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+  }
   .review-item__titles {
     font-size: 3em;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1025px) {
+  .review-item__img {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .review-item .input {
+    display: none;
+  }
+  .review-item .warning {
+    display: none;
+  }
+  .review-item__img {
+    max-width: 200px;
+  }
   .review-item__titles {
     font-size: 2em;
   }
@@ -184,16 +225,30 @@ body {
 }
 
 .input {
+  display: flex;
+  justify-content: space-between;
   border: none;
   border-radius: 2.75em;
-  padding: 0.9375em 1.875em;
   background-color: #F3F9FF;
-  outline: none;
   font-weight: 400;
   font-size: 1em;
 }
-.input::placeholder {
+.input--checked {
+  justify-content: center;
+  align-items: center;
+}
+.input--form {
+  max-height: 48px;
+  max-width: 440px;
+}
+.input--email {
+  padding: 0.9375em 1.875em;
+}
+.input--email::placeholder {
   color: #1792C7;
+}
+.input--email:focus {
+  outline: none;
 }
 
 .header-wrapper {
@@ -204,6 +259,10 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  position: fixed;
+  background: #FFFFFF;
+  z-index: 99;
 }
 .header__logo {
   height: 2.1875em;
@@ -251,6 +310,7 @@ body {
 .header__menu {
   display: none;
   position: fixed;
+  background: #FFFFFF;
   left: 0;
   bottom: 0;
   right: 0;

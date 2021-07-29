@@ -1,5 +1,6 @@
-import React, {useState} from "react"
+import React, {useContext, useState} from "react"
 import classNames from 'classnames'
+import {LanguageContext} from "../../context/LanguageContext";
 
 const NAV_LiNKS = [
     {name: 'Как это работает?', ENname:'How it works?', scrlPts: '10', keyword: 'HowItWorks'},
@@ -10,14 +11,8 @@ const NAV_LiNKS = [
 ]
 
 const Header: React.FC = () => {
+    const language = useContext(LanguageContext)
     const [menuVisible, setMenuVisible] = useState(false)
-    const [EN, setEN] = useState(false)
-
-    const toggleEN = (i) => {
-        if (EN !== i) {
-            setEN(i)
-        }
-    }
 
     const toggleMenuVisible = () => {
         setMenuVisible(!menuVisible)
@@ -47,7 +42,7 @@ const Header: React.FC = () => {
                         {NAV_LiNKS.map((item, i) => (
                             <li key={i} className="header__item">
                                 <button className="header__link" onClick={() => handleMenuClick(item.scrlPts)}>
-                                    {EN ? item.ENname : item.name}
+                                    {(language.language === 'EN') ? item.ENname : item.name}
                                 </button>
                             </li>
                         ))}
@@ -55,20 +50,20 @@ const Header: React.FC = () => {
                 </nav>
                 <div className="header__language">
                     <button className={classNames('header__language-btn', {
-                        'header__active-language': !EN
-                    })} onClick={() => toggleEN(false)}>
+                        'header__active-language': (language.language === null || language.language === 'RU')
+                    })} onClick={() => language.toggleLanguage("RU")}>
                         RU
                     </button>
                     <button className={classNames('header__language-btn', {
-                        'header__active-language': EN
-                    })} onClick={() => toggleEN(true)}>
+                        'header__active-language': (language.language === "EN")
+                    })} onClick={() => language.toggleLanguage('EN')}>
                         EN
                     </button>
                 </div>
                 <div className="header__btn">
                     <button className="btn btn--hollow">
                         <span className="btn__label--hollow">
-                            {EN ? 'Connect' : 'Подключиться'}
+                            {(language.language === 'EN') ? 'Connect' : 'Подключиться'}
                         </span>
                     </button>
                 </div>
@@ -90,7 +85,7 @@ const Header: React.FC = () => {
                             {NAV_LiNKS.map((item, i) => (
                                 <li key={i} className="header__item">
                                     <button className="header__link" onClick={() => handleMenuClick(item.scrlPts)}>
-                                        {EN ? item.ENname : item.name}
+                                        {(language.language === 'EN') ? item.ENname : item.name}
                                     </button>
                                 </li>
                             ))}
@@ -98,7 +93,7 @@ const Header: React.FC = () => {
                         <div className="header__menu__bottom">
                             <button className="btn btn--hollow">
                                 <span className="btn__label--hollow">
-                                    {EN ? 'Connect' : 'Подключиться'}
+                                    {(language.language === 'EN') ? 'Connect' : 'Подключиться'}
                                 </span>
                             </button>
                         </div>

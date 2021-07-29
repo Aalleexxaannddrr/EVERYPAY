@@ -1,7 +1,9 @@
 .review-item {
+  height: 100%;
   padding: em(15, $fz) em(30, $fz);
   display: flex;
   justify-content: space-around;
+  align-items: center;
 
   &__left {
     max-width: 450px;
@@ -20,13 +22,46 @@
     font-size: em(18, $fz);
   }
 
+  @media screen and (max-width: 1025px) {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+
+    &__img {
+      max-width: 400px;
+      max-height: 300px;
+    }
+  }
+
   @media screen and (max-width: 768px) {
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
     &__titles {
       font-size: em(48, $fz);
     }
   }
 
-  @media screen and (max-width: $breakpointSmall) {
+  @media screen and (max-width: 1025px) {
+
+    &__img {
+      max-width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .input {
+      display: none;
+    }
+
+    .warning {
+      display: none;
+    }
+
+    &__img {
+      max-width: 200px;
+    }
+
     &__titles {
       font-size: em(32, $fz);
     }

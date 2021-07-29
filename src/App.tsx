@@ -1,21 +1,22 @@
 import 'styles/main.scss'
 
 import React from 'react'
-import { ToastContainer } from 'react-toastify'
-
+import {LanguageContext} from "./context/LanguageContext";
 import Page from "./components/Page";
+import {useLanguage} from "./hooks/language.hook";
 
 const App: React.FC = () => {
+    const {toggleLanguage, language} = useLanguage()
+
   return (
-    <div id="app">
-      <ToastContainer
-        containerId="toast-main-container"
-        className="toast-main-container"
-        autoClose={5000}
-        pauseOnFocusLoss
-      />
-      <Page />
-    </div>
+      <LanguageContext.Provider value={{
+          language, toggleLanguage
+      }
+      }>
+        <div id="app">
+          <Page />
+        </div>
+      </LanguageContext.Provider>
   )
 }
 

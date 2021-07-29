@@ -29,3 +29,12 @@ body {
     max-width: em(1000, $fz);
   }
 }
+
+.warning {
+  color: red;
+}
+
+.material-icons {
+  color: #99BA00;
+  margin-right: 10px;
+}

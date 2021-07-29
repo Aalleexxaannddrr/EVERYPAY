@@ -2,25 +2,33 @@
   {
     "id": "1",
     "title": "Не пропускайе важные оплаты",
+    "titleEN": "Don't miss important payments",
     "description": "Если от них зависят ваши проекты или старт рекламных кампаний",
+    "descriptionEN": "If your projects or the start of advertising campaigns depend on them",
     "imgUri": "/img/slider/1.png"
   },
   {
     "id": "2",
     "title": "Сократите издержки на бухгалтерию и коммуникации",
+    "titleEN": "Reduce your accounting and communication costs",
     "description": "Получайте информацию о платежах на счет компании там, где вам это удобно",
+    "descriptionEN": "Receive information about payments to the company's account wherever it is convenient for you ",
     "imgUri": "/img/slider/2.png"
   },
   {
     "id": "3",
     "title": "Создавайте собственные сценарии действий",
+    "titleEN": "Create your own action scenarios",
     "description": "при поступлении денег на счет вашей компании",
+    "descriptionEN": "upon receipt of money to your company's account",
     "imgUri": "/img/slider/3.png"
   },
   {
     "id": "4",
     "title": "Реагируйте на платежи так быстро, как они поступают на ваш счет",
+    "titleEN": "Respond to payments as quickly as they arrive in your account",
     "description": "",
+    "descriptionEN": "",
     "imgUri": "/img/slider/4.png"
   }
 ]

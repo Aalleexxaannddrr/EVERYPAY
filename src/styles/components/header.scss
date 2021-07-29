@@ -8,6 +8,10 @@ $headerHeight: em(80, $fz);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  position: fixed;
+  background: #FFFFFF;
+  z-index: 99;
 
   &__logo {
     height: em(35, $fz);
@@ -65,6 +69,7 @@ $headerHeight: em(80, $fz);
   &__menu {
     display: none;
     position: fixed;
+    background: #FFFFFF;
     left: 0;
     bottom: 0;
     right: 0;
