@@ -13,8 +13,16 @@
     max-height: 500px;
   }
 
+  &__img2 {
+    max-height: 300px;
+  }
+
   &__titles {
     font-size: em(40, $fz);
+  }
+
+  &__titles2 {
+    font-size: em(28, $fz);
   }
 
   &__text {
@@ -22,10 +30,26 @@
     font-size: em(18, $fz);
   }
 
+  &__text2 {
+    font-weight: 400;
+    font-size: em(18, $fz);
+  }
+
   @media screen and (max-width: 1025px) {
-    text-align: center;
     flex-direction: column;
     align-items: center;
+
+    &__revers {
+      flex-direction: column-reverse;
+    }
+
+    &__titles {
+      text-align: center;
+    }
+
+    &__text {
+      text-align: center;
+    }
 
     &__img {
       max-width: 400px;
@@ -59,6 +83,10 @@
     }
 
     &__img {
+      max-width: 200px;
+    }
+
+    &__img2 {
       max-width: 200px;
     }
 
