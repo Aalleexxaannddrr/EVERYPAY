@@ -1,7 +1,8 @@
 import React, {Fragment, useContext} from "react"
+import {LanguageContext} from "../../context/LanguageContext";
 import Header from "../Header";
 import Slider from "../Slider";
-import {LanguageContext} from "../../context/LanguageContext";
+import HowItWorks from "../HowItWorks";
 
 const Page: React.FC = () => {
     const language = useContext(LanguageContext)
@@ -26,6 +27,7 @@ const Page: React.FC = () => {
                         </p>
                     </div>
                 </div>
+                <HowItWorks />
             </Fragment>
         </div>
     )
