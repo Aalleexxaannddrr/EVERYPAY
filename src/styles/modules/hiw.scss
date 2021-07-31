@@ -4,6 +4,10 @@
   justify-content: space-around;
   align-items: center;
 
+  &__bi {
+    align-items: flex-start;
+  }
+
   &__titles {
     padding: em(15, $fz) em(30, $fz);
     font-size: em(40, $fz);
@@ -12,6 +16,13 @@
   @media screen and (max-width: 1025px) {
     &__titles {
       text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__bi {
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -48,5 +59,103 @@
 
   @media screen and (max-width: 320px) {
     width: 80%;
+  }
+}
+
+.banks {
+  display: flex;
+  padding: em(15, $fz) em(30, $fz);
+  justify-content: flex-start;
+  border: 1px solid rgba(56, 152, 254, 0.4);
+  width: 48%;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  &__title {
+    width: 100%;
+    color: $primary-color-second;
+    margin-bottom: 50px;
+  }
+
+  &__hr {
+    width: 100%;
+    border-color: $primary-color-second;
+    height: 0px;
+    margin-bottom: 50px;
+    opacity: 0.2;
+  }
+
+  &__img-container {
+    width: 50%;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 200px;
+    max-height: 50px;
+    margin-right: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 500px) {
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__hr {
+      margin-bottom: 10px;
+    }
+
+    &__img-container {
+      margin-bottom: 10px;
+    }
+
+    &__img {
+      max-width: 100px;
+      max-height: 30px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    &__img {
+      max-width: 70px;
+    }
+  }
+}
+
+.integrations {
+  padding: em(15, $fz) em(30, $fz);
+  border: 1px solid rgba(56, 152, 254, 0.4);
+  width: 48%;
+
+  &__title {
+    color: $primary-color-second;
+    margin-bottom: 50px;
+  }
+
+  &__img {
+    max-width: 200px;
+    max-height: 66px;
+    margin-right: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 500px) {
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__img {
+      max-width: 100px;
+      max-height: 30px;
+    }
   }
 }
