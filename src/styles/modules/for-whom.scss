@@ -1,0 +1,11 @@
+.for-whom {
+  &__text {
+    text-align: left;
+  }
+
+  @media screen and (max-width: 320px) {
+    &__text {
+      text-align: center;
+    }
+  }
+}

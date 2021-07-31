@@ -1,6 +1,5 @@
 @import "~normalize.css/normalize.css";
 @import '~swiper/swiper-bundle.min.css';
-@import '~react-toastify/dist/ReactToastify.css';
 @font-face {
   font-family: "AvenirNext";
   font-weight: 400;
@@ -459,6 +458,15 @@ body {
   .integrations__img {
     max-width: 100px;
     max-height: 30px;
+  }
+}
+
+.for-whom__text {
+  text-align: left;
+}
+@media screen and (max-width: 320px) {
+  .for-whom__text {
+    text-align: center;
   }
 }
 

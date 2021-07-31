@@ -3,6 +3,7 @@ import {LanguageContext} from "../../context/LanguageContext";
 import Header from "../Header";
 import Slider from "../Slider";
 import HowItWorks from "../HowItWorks";
+import ForWhom from "../ForWhom";
 
 const Page: React.FC = () => {
     const language = useContext(LanguageContext)
@@ -29,6 +30,9 @@ const Page: React.FC = () => {
                 </div>
                 <section className="how-it-works">
                     <HowItWorks />
+                </section>
+                <section className="for-whom">
+                    <ForWhom />
                 </section>
             </Fragment>
         </div>
