@@ -1,0 +1,52 @@
+.hiw {
+  display: flex;
+  padding: em(15, $fz) em(30, $fz);
+  justify-content: space-around;
+  align-items: center;
+
+  &__titles {
+    padding: em(15, $fz) em(30, $fz);
+    font-size: em(40, $fz);
+  }
+
+  @media screen and (max-width: 1025px) {
+    &__titles {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    flex-direction: column;
+  }
+}
+
+.hiw-item {
+  width: 20%;
+  text-align: center;
+
+  &--img {
+    max-height: 150px;
+  }
+
+  @media screen and (max-width: 1025px) {
+    &--img {
+      max-height: 100px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &--img {
+      max-height: 70px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    &--img {
+      max-height: 50px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 80%;
+  }
+}

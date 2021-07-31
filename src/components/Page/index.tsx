@@ -27,7 +27,9 @@ const Page: React.FC = () => {
                         </p>
                     </div>
                 </div>
-                <HowItWorks />
+                <section className="how-it-works">
+                    <HowItWorks />
+                </section>
             </Fragment>
         </div>
     )

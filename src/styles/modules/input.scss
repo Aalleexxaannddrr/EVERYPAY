@@ -1,7 +1,6 @@
 .input {
   display: flex;
   justify-content: space-between;
-  $fz: 16;
   border: none;
   border-radius: em(44, $fz);
   background-color: $input-color;
@@ -18,6 +17,13 @@
     max-width: 440px;
   }
 
+  &--form2 {
+    max-height: 48px;
+    max-width: 440px;
+    background-color: $default-color;
+    border: 1px solid rgba(56, 152, 254, 0.4);;
+  }
+
   &--email {
     padding: em(15, $fz) em(30, $fz);
 
@@ -27,6 +33,29 @@
 
     &:focus {
       outline: none;
+    }
+  }
+
+  &--email2 {
+    background-color: $default-color;
+    padding: em(15, $fz) em(30, $fz);
+
+    &::placeholder {
+      color: $primary-color-second;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  @media screen and (max-width: 320px){
+    &--form {
+      display: none;
+    }
+
+    &--email2 {
+      max-width: 120px;
     }
   }
 }

@@ -3,11 +3,11 @@ import classNames from 'classnames'
 import {LanguageContext} from "../../context/LanguageContext";
 
 const NAV_LiNKS = [
-    {name: 'Как это работает?', ENname:'How it works?', scrlPts: '10', keyword: 'HowItWorks'},
-    {name: 'Для кого', ENname:'For whom', scrlPts: '20', keyword: 'ForWhom'},
-    {name: 'Кейсы', ENname:'Cases', scrlPts: '30', keyword: 'Cases'},
-    {name: 'Тарифы', ENname: 'Tariffs', scrlPts: '40', keyword: 'Tariffs'},
-    {name: 'Безопасность', ENname:'Safety', scrlPts: '50', keyword: 'Safety'}
+    {name: 'Как это работает?', ENname:'How it works?', keyword: 'how-it-works'},
+    {name: 'Для кого', ENname:'For whom', keyword: 'ForWhom'},
+    {name: 'Кейсы', ENname:'Cases', keyword: 'Cases'},
+    {name: 'Тарифы', ENname: 'Tariffs', keyword: 'Tariffs'},
+    {name: 'Безопасность', ENname:'Safety', keyword: 'Safety'}
 ]
 
 const Header: React.FC = () => {
@@ -18,13 +18,15 @@ const Header: React.FC = () => {
         setMenuVisible(!menuVisible)
     }
 
-    const handleMenuClick = (scrlPts) => {
-        const doingBlock = document.querySelector('section.doing-block')
-        if (!doingBlock) return
-        const offsetTop = doingBlock.getBoundingClientRect().top
+    const handleMenuClick = (keyword) => {
+        if (menuVisible) {toggleMenuVisible()}
+        const section = document.querySelector(`section.${keyword}`)
+        if (!section) return
+        const offsetTop = section.getBoundingClientRect().top
+        const position = window.pageYOffset
         window.scrollTo({
-            top: offsetTop - scrlPts,
-            behavior: 'smooth'
+            top: position + offsetTop - 60,
+            behavior: "smooth"
         })
     }
 
@@ -41,7 +43,7 @@ const Header: React.FC = () => {
                     <ul className="null header__list">
                         {NAV_LiNKS.map((item, i) => (
                             <li key={i} className="header__item">
-                                <button className="header__link" onClick={() => handleMenuClick(item.scrlPts)}>
+                                <button className="header__link" onClick={() => handleMenuClick(item.keyword)}>
                                     {(language.language === 'EN') ? item.ENname : item.name}
                                 </button>
                             </li>
@@ -84,7 +86,7 @@ const Header: React.FC = () => {
                         <ul className="null header__menu__nav">
                             {NAV_LiNKS.map((item, i) => (
                                 <li key={i} className="header__item">
-                                    <button className="header__link" onClick={() => handleMenuClick(item.scrlPts)}>
+                                    <button className="header__link" onClick={() => handleMenuClick(item.keyword)}>
                                         {(language.language === 'EN') ? item.ENname : item.name}
                                     </button>
                                 </li>

@@ -22,7 +22,6 @@ const Slider: React.FC = () => {
             setMessage('')
             setCheck(true)
         }
-
     }
 
     return(

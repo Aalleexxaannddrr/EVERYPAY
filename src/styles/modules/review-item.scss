@@ -25,6 +25,11 @@
     font-size: em(28, $fz);
   }
 
+  &__titles3 {
+    max-width: 35%;
+    font-size: em(40, $fz);
+  }
+
   &__text {
     font-weight: 400;
     font-size: em(18, $fz);
@@ -33,6 +38,13 @@
   &__text2 {
     font-weight: 400;
     font-size: em(18, $fz);
+  }
+
+  &__blue {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $input-color;
   }
 
   @media screen and (max-width: 1025px) {
@@ -45,6 +57,12 @@
 
     &__titles {
       text-align: center;
+    }
+
+    &__titles3 {
+      text-align: center;
+      max-width: 80%;
+      font-size: em(40, $fz);
     }
 
     &__text {
@@ -61,22 +79,17 @@
     max-width: 300px;
     margin-right: auto;
     margin-left: auto;
+
     &__titles {
       font-size: em(48, $fz);
     }
-  }
 
-  @media screen and (max-width: 1025px) {
-
-    &__img {
+    &__img2 {
       max-width: 300px;
     }
   }
 
   @media screen and (max-width: 320px) {
-    .input {
-      display: none;
-    }
 
     .warning {
       display: none;
@@ -92,6 +105,12 @@
 
     &__titles {
       font-size: em(32, $fz);
+    }
+
+    &__titles3 {
+      text-align: center;
+      max-width: 100%;
+      font-size: em(28, $fz);
     }
 
     &__text {
