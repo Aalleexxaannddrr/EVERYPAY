@@ -5,6 +5,7 @@ import Slider from "../Slider";
 import HowItWorks from "../HowItWorks";
 import ForWhom from "../ForWhom";
 import Cases from "../Cases";
+import Tariffs from "../Tariffs";
 
 const Page: React.FC = () => {
     const language = useContext(LanguageContext)
@@ -37,6 +38,9 @@ const Page: React.FC = () => {
                 </section>
                 <section className="cases">
                     <Cases />
+                </section>
+                <section className="tariffs">
+                    <Tariffs />
                 </section>
             </Fragment>
         </div>

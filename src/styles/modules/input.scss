@@ -22,6 +22,11 @@
     max-width: 440px;
     background-color: $default-color;
     border: 1px solid rgba(56, 152, 254, 0.4);
+
+    &__tariffs {
+      background-color: $input-color;
+      border: none;
+    }
   }
 
   &--email {
@@ -49,6 +54,11 @@
     }
   }
 
+  &__small {
+    display: flex;
+    justify-content: center;
+  }
+
   @media screen and (max-width: 320px){
     &--form {
       display: none;
@@ -56,6 +66,18 @@
 
     &--email2 {
       max-width: 120px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__big {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__small {
+      display: none;
     }
   }
 }

@@ -10,9 +10,17 @@ const HowItWorks: React.FC = () => {
     const handleClickToKnowBtn = (email) => {
         const isEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         if (!email){
-            setMessage('Введите email!')
+            if (language.language === 'EN'){
+                setMessage('Enter your email!')
+            } else if (language.language === 'RU') {
+                setMessage('Введите email!')
+            }
         } else if(!(isEmail.test(String(email).toLowerCase()))) {
-            setMessage('Введен неверный email!')
+            if (language.language === 'EN'){
+                setMessage('Invalid email entered!')
+            } else if (language.language === 'RU') {
+                setMessage('Введен неверный email!')
+            }
         } else if(isEmail.test(String(email).toLowerCase())){
             setMessage('')
             setCheck(true)
