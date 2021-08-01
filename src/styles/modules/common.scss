@@ -37,4 +37,15 @@ body {
 .material-icons {
   color: #99BA00;
   margin-right: 10px;
+
+  &__blue {
+    color: #00B8F0;
+  }
+}
+
+.blue-text {
+  color: #00B8F0;
+  display: flex;
+  align-items: center;
+
 }

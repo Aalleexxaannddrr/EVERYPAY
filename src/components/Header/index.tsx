@@ -5,7 +5,7 @@ import {LanguageContext} from "../../context/LanguageContext";
 const NAV_LiNKS = [
     {name: 'Как это работает?', ENname:'How it works?', keyword: 'how-it-works'},
     {name: 'Для кого', ENname:'For whom', keyword: 'for-whom'},
-    {name: 'Кейсы', ENname:'Cases', keyword: 'Cases'},
+    {name: 'Кейсы', ENname:'Cases', keyword: 'cases'},
     {name: 'Тарифы', ENname: 'Tariffs', keyword: 'Tariffs'},
     {name: 'Безопасность', ENname:'Safety', keyword: 'Safety'}
 ]

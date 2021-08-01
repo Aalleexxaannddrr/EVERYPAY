@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "img1": "/img/cases/bitrix.png",
+    "img2": "/img/cases/everypay.png",
+    "img3": "/img/cases/telegram.png",
+    "title": "Автоматизация диджитал-агентства",
+    "titleEN": "Digital agency automation"
+  },
+  {
+    "id": "2",
+    "img1": "/img/cases/bitrix.png",
+    "img2": "/img/cases/everypay.png",
+    "img3": "/img/cases/dot.png",
+    "title": "Приём платежей в рекламной медиа-группе",
+    "titleEN": "Acceptance of payments in an advertising media group"
+  },
+  {
+    "id": "3",
+    "img1": "/img/cases/bitrix.png",
+    "img2": "/img/cases/everypay.png",
+    "img3": "/img/cases/dot.png",
+    "title": "Оптимизация бухгалтерии в производственной компании",
+    "titleEN": "Optimization of accounting in a manufacturing company"
+  }
+]
