@@ -30,6 +30,12 @@
     font-size: em(40, $fz);
   }
 
+  &__titles4 {
+    width: 40%;
+    font-weight: 500;
+    font-size: em(28, $fz);
+  }
+
   &__text {
     font-weight: 400;
     font-size: em(18, $fz);
@@ -60,6 +66,10 @@
     }
 
     &__titles {
+      text-align: center;
+    }
+
+    &__titles4 {
       text-align: center;
     }
 
@@ -159,6 +169,13 @@
       text-align: center;
       max-width: 100%;
       font-size: em(28, $fz);
+    }
+
+    &__titles4 {
+      text-align: left;
+      align-self: flex-start;
+      font-weight: 600;
+      font-size: 18px;
     }
 
     &__text {

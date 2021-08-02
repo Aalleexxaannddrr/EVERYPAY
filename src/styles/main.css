@@ -194,6 +194,11 @@ body {
   max-width: 35%;
   font-size: 2.5em;
 }
+.review-item__titles4 {
+  width: 40%;
+  font-weight: 500;
+  font-size: 1.75em;
+}
 .review-item__text {
   font-weight: 400;
   font-size: 1.125em;
@@ -220,6 +225,9 @@ body {
     flex-direction: column-reverse;
   }
   .review-item__titles {
+    text-align: center;
+  }
+  .review-item__titles4 {
     text-align: center;
   }
   .review-item__titles3 {
@@ -293,6 +301,12 @@ body {
     text-align: center;
     max-width: 100%;
     font-size: 1.75em;
+  }
+  .review-item__titles4 {
+    text-align: left;
+    align-self: flex-start;
+    font-weight: 600;
+    font-size: 18px;
   }
   .review-item__text {
     font-size: 1em;
@@ -579,6 +593,55 @@ body {
   .cases .swiper-pagination {
     display: none;
   }
+}
+
+.line {
+  border: none;
+  width: 3px;
+  height: 43px;
+  background: linear-gradient(180deg, #00B8F0 0%, #00B8F0 0.01%, #B2EEFC 73.96%);
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 768px) {
+  .line {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .line {
+    margin-top: 5px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .line {
+    height: 25px;
+  }
+}
+
+.soon-line {
+  width: 43px;
+  margin-right: 15px;
+}
+
+.soon-right {
+  display: flex;
+}
+@media screen and (max-width: 320px) {
+  .soon-right {
+    width: 99%;
+  }
+}
+
+.soon-more {
+  text-align: center;
+}
+
+.soon-sep {
+  border: none;
+  width: 85%;
+  height: 1px;
+  background-color: #00B8F0;
 }
 
 .header-wrapper {
