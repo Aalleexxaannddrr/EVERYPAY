@@ -7,7 +7,7 @@ const NAV_LiNKS = [
     {name: 'Для кого', ENname:'For whom', keyword: 'for-whom'},
     {name: 'Кейсы', ENname:'Cases', keyword: 'cases'},
     {name: 'Тарифы', ENname: 'Tariffs', keyword: 'tariffs'},
-    {name: 'Безопасность', ENname:'Safety', keyword: 'Safety'}
+    {name: 'Безопасность', ENname:'Safety', keyword: 'safety'}
 ]
 
 const Header: React.FC = () => {

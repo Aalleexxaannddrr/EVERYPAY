@@ -6,6 +6,7 @@ import HowItWorks from "../HowItWorks";
 import ForWhom from "../ForWhom";
 import Cases from "../Cases";
 import Tariffs from "../Tariffs";
+import Safety from "../Safety";
 
 const Page: React.FC = () => {
     const language = useContext(LanguageContext)
@@ -41,6 +42,9 @@ const Page: React.FC = () => {
                 </section>
                 <section className="tariffs">
                     <Tariffs />
+                </section>
+                <section className="safety">
+                    <Safety />
                 </section>
             </Fragment>
         </div>

@@ -7,6 +7,10 @@
 
   &__left {
     max-width: 450px;
+
+    &__safety {
+      margin-left: 40px;
+    }
   }
 
   &__img {
@@ -15,6 +19,28 @@
 
   &__img2 {
     max-height: 300px;
+
+    &__hidden {
+      max-width: 50%;
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 500px) {
+      &__big {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &__hidden {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      &__hidden {
+        display: none;
+      }
+    }
   }
 
   &__titles {
