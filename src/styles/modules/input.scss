@@ -54,6 +54,42 @@
     }
   }
 
+  &--connect {
+    background-color: $default-color;
+    padding: em(15, $fz) em(30, $fz);
+    border: 1px solid rgba(56, 152, 254, 0.4);
+    max-height: 48px;
+    width: 440px;
+    margin-bottom: 20px;
+
+    &::placeholder {
+      color: $primary-color-second;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &--textarea {
+    background-color: $default-color;
+    padding: em(15, $fz) em(30, $fz);
+    border: 1px solid rgba(56, 152, 254, 0.4);
+    min-height: 70px;
+    width: 440px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+    &::placeholder {
+      color: $primary-color-second;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
   &__small {
     display: flex;
     justify-content: center;
@@ -67,11 +103,27 @@
     &--email2 {
       max-width: 120px;
     }
+
+    &--connect {
+      max-width: 200px;
+    }
+
+    &--textarea {
+      max-width: 200px;
+    }
   }
 
   @media screen and (max-width: 768px) {
     &__big {
       display: none;
+    }
+
+    &--connect {
+      width: 300px;
+    }
+
+    &--textarea {
+      width: 300px;
     }
   }
 

@@ -71,7 +71,8 @@ const HowItWorks: React.FC = () => {
                     {check ?
                         <div className="input input--checked">
                             <i className="material-icons">check</i>
-                            <p>Проверьте e-mail!</p>
+                            <p>{(language.language === 'EN') ? "Check email!" :
+                                "Проверьте email!"}</p>
                         </div> :
                         <div className="input input--form2">
                             <input

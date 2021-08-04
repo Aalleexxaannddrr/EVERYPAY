@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: em(15, $fz) em(30, $fz);
+
+  &__text1 {
+    font-size: 10px;
+  }
+
+  &__text2 {
+    color: $primary-color;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 320px){
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}

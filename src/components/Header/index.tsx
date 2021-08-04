@@ -35,7 +35,7 @@ const Header: React.FC = () => {
             <header className="header">
                 <button
                     className="header__logo"
-                    onClick={() => handleMenuClick(0)}
+                    onClick={() => handleMenuClick("navbar")}
                 >
                     <img src="/img/logo1.png" alt="" className="header__logo-img" />
                 </button>
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
                     </button>
                 </div>
                 <div className="header__btn">
-                    <button className="btn btn--hollow">
+                    <button className="btn btn--hollow" onClick={() => handleMenuClick('connect')}>
                         <span className="btn__label--hollow">
                             {(language.language === 'EN') ? 'Connect' : 'Подключиться'}
                         </span>
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
                             ))}
                         </ul>
                         <div className="header__menu__bottom">
-                            <button className="btn btn--hollow">
+                            <button className="btn btn--hollow" onClick={() => handleMenuClick('connect')}>
                                 <span className="btn__label--hollow">
                                     {(language.language === 'EN') ? 'Connect' : 'Подключиться'}
                                 </span>

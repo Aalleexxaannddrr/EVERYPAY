@@ -11,6 +11,14 @@
     &__safety {
       margin-left: 40px;
     }
+
+    &__connect {
+      align-self: flex-start;
+
+      @media screen and (max-width: 1024px) {
+        align-self: center;
+      }
+    }
   }
 
   &__img {
@@ -45,6 +53,10 @@
 
   &__titles {
     font-size: em(40, $fz);
+
+    &--left {
+      padding: em(15, $fz) em(30, $fz);
+    }
   }
 
   &__titles2 {
@@ -65,6 +77,16 @@
   &__text {
     font-weight: 400;
     font-size: em(18, $fz);
+    margin-top: 0;
+
+    &__m {
+      margin-bottom: 0;
+    }
+
+    &__blue {
+      color: rgba(56, 152, 254, 0.3);
+      margin-bottom: 0;
+    }
   }
 
   &__text2 {

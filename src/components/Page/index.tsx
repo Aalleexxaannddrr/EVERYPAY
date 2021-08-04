@@ -7,6 +7,7 @@ import ForWhom from "../ForWhom";
 import Cases from "../Cases";
 import Tariffs from "../Tariffs";
 import Safety from "../Safety";
+import Connect from "../Connect";
 
 const Page: React.FC = () => {
     const language = useContext(LanguageContext)
@@ -14,7 +15,9 @@ const Page: React.FC = () => {
     return(
         <div className="page">
             <Fragment>
-                <Header />
+                <section className="navbar">
+                    <Header />
+                </section>
                 <Slider />
                 <div className="review-item review-item__revers">
                     <img className="review-item__img2" src="/img/page/1.png" alt="" />
@@ -45,6 +48,17 @@ const Page: React.FC = () => {
                 </section>
                 <section className="safety">
                     <Safety />
+                </section>
+                <section className="connect">
+                    <Connect />
+                    <div className="footer">
+                        <p className="footer__text1">© 2020, Everypay</p>
+                        <p className="footer__text2">
+                            {(language.language === 'EN') ?
+                                "Privacy Policy" :
+                                "Политика конфиденциальности"}
+                        </p>
+                    </div>
                 </section>
             </Fragment>
         </div>
