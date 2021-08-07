@@ -1,12 +1,27 @@
 .btn {
-  padding: em(10, $fz);
   cursor: pointer;
 
   &__label {
     font-weight: 600;
 
     &--hollow{
-      color: $primary-color;
+      width: 173px;
+      height: 46px;
+      border-radius: 44px;
+      background: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 12px;
+
+      &--text {
+        background: linear-gradient(180deg, #1792C7 0%, #00B8F0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 30px;
+        font-weight: 600;
+        font-size: 16px;
+      }
     }
 
     &--fill{
@@ -15,11 +30,12 @@
   }
 
   &--hollow {
-    background: $default-color;
-    border-radius: em(44, $fz);
-    min-width: em(175, $fz);
-    border: 2px solid black;
-    border-color: $primary-color;
+    width: 175px;
+    height: 48px;
+    border-radius: 44px;
+    position: relative;
+    background: linear-gradient(180deg, #1792C7 0%, #00B8F0 100%);
+    padding: 1px;
 
     &:hover {
       box-shadow: 0px 6px 18px rgba(53, 152, 254, 0.38185);
@@ -32,15 +48,18 @@
     min-width: em(175, $fz);
     border: none;
 
+    &--header {
+      width: 175px;
+      height: 48px;
+      margin-left: 15px;
+      margin-top: 4px;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
     &:hover {
       box-shadow: 0px 6px 18px rgba(53, 152, 254, 0.38185);
     }
   }
 
-  @media screen and (max-width: 320px){
-    &--fill {
-      min-width: em(0, $fz);
-      width: em(100, $fz);
-    }
-  }
 }

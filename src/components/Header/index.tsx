@@ -63,45 +63,45 @@ const Header: React.FC = () => {
                     </button>
                 </div>
                 <div className="header__btn">
-                    <button className="btn btn--hollow" onClick={() => handleMenuClick('connect')}>
-                        <span className="btn__label--hollow">
-                            {(language.language === 'EN') ? 'Connect' : 'Подключиться'}
-                        </span>
-                    </button>
+                    <div className="btn btn--hollow" onClick={() => handleMenuClick('connect')}>
+                        <div className="btn__label--hollow">
+                            <p className="btn__label--hollow--text">
+                                {(language.language === 'EN') ? 'Connect' : 'Подключиться'}
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div
-                    className={classNames('menu-btn menu-btn--ml', {
-                        'active': menuVisible
-                    })}
+                    className='menu-btn menu-btn--ml'
                     onClick={toggleMenuVisible}
                 >
                     <span></span>
                 </div>
-                <div
-                    className={classNames('header__menu', {
-                        'header__menu--visible': menuVisible,
-                    })}
-                >
-                    <div className="header__menu__content-wrapper">
-                        <ul className="null header__menu__nav">
-                            {NAV_LiNKS.map((item, i) => (
-                                <li key={i} className="header__item">
-                                    <button className="header__link" onClick={() => handleMenuClick(item.keyword)}>
-                                        {(language.language === 'EN') ? item.ENname : item.name}
-                                    </button>
-                                </li>
-                            ))}
-                        </ul>
-                        <div className="header__menu__bottom">
-                            <button className="btn btn--hollow" onClick={() => handleMenuClick('connect')}>
-                                <span className="btn__label--hollow">
+            </header>
+            <div
+                className={classNames('header__menu', {
+                    'header__menu--visible': menuVisible,
+                })}
+            >
+                <div className="header__menu__content-wrapper">
+                    <ul className="null header__menu__nav">
+                        {NAV_LiNKS.map((item, i) => (
+                            <li key={i} className="header__item">
+                                <button className="header__link" onClick={() => handleMenuClick(item.keyword)}>
+                                    {(language.language === 'EN') ? item.ENname : item.name}
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="header__menu__bottom">
+                        <button className="btn btn--fill btn--fill--header" onClick={() => handleMenuClick('connect')}>
+                                <span className="btn__label--fill">
                                     {(language.language === 'EN') ? 'Connect' : 'Подключиться'}
                                 </span>
-                            </button>
-                        </div>
+                        </button>
                     </div>
                 </div>
-            </header>
+            </div>
         </div>
     )
 

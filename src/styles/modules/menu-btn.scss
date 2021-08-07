@@ -1,49 +1,25 @@
 .menu-btn {
-  position: relative;
   cursor: pointer;
-  display: none;
+  margin-bottom: 12px;
+  margin-right: 27px;
 
   span::before,
   span::after {
     position: absolute;
-    background-color: $primary-color;
+    background-color: #1399CF;
   }
 
   span {
     &::before,
     &::after {
       content: '';
-      transition: 0.2s;
-    }
-    &::before {
-      width: 100%;
-
     }
     &::after {
-      width: 100%;
-      transform: translateY(8px);
-
-      @media screen and (max-width: 768px) {
-        transform: translateY(6px);
-      }
-      @media screen and (max-width: 420px) {
-        transform: translateY(5px);
-      }
-    }
-  }
-  &.active {
-    span {
-
-      &:before {
-        transform: rotate(-45deg);
-      }
-      &:after {
-        transform: rotate(45deg);
-      }
+      transform: translateY(9.7px);
     }
   }
 
-  @media (max-width: 880px) {
+  @media (max-width: 1440px) {
     display: block;
   }
 }

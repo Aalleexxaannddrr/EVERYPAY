@@ -1,20 +1,22 @@
-$headerHeight: em(80, $fz);
-
 .header-wrapper {
-  height: $headerHeight;
+  width: 100%;
+  background: #FFFFFF;
 }
 
 .header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
-  position: fixed;
-  background: #FFFFFF;
-  z-index: 99;
+  max-width: 1098px;
+  max-height: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  margin-bottom: 20px;
 
   &__logo {
-    height: em(35, $fz);
+    width: 130.6px;
+    height: 20.42px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -29,18 +31,24 @@ $headerHeight: em(80, $fz);
   }
 
   &__item {
-    margin-left: em(30, $fz);
+    margin-left: 39px;
     list-style: none;
   }
 
   &__link {
-    font-size: em(15, $fz);
+    font-weight: 400;
+    font-size: 14px;
     background: transparent;
     border: none;
     cursor: pointer;
+    color: #2D3238;
 
     &:hover {
-      color: $primary-color;
+      color: #1792C7;
+    }
+
+    &:active {
+      color: rgba(85, 94, 104, 0.5);
     }
   }
 
@@ -52,124 +60,82 @@ $headerHeight: em(80, $fz);
     background: transparent;
     border: none;
     cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    color: #2D3238;
+    opacity: 0.5;
 
     &:hover {
-      color: $primary-color;
+      background: linear-gradient(180deg, #1792C7 0%, #00B8F0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
   &__active-language {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: $primary-color;
+    color: #00B8F0;
     text-decoration: underline;
+    opacity: 1;
   }
 
-  &__menu {
-    display: none;
-    position: fixed;
-    background: #FFFFFF;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100vh;
-    animation: showAnimation .25s ease-out;
-
-    &--visible {
-      display: block;
-      height: 90%;
-    }
-
-    .menu-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-
-    &__content-wrapper {
-      background: $default-color;
-      height: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: auto;
-      text-align: center;
-    }
-
-    &__nav {
-      margin-left: -20px;
-      margin-top: 80px;
-
-      li {
-        padding: 10px 40px;
-      }
-    }
-
-    &__bottom {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-    }
-  }
-
-  @media screen and (max-width: 1400px) {
-    padding: em(24, $fz) em(30, $fz);
-  }
-
-  @media screen and (max-width: 880px) {
-    &__language {
-      margin-left: auto;
-    }
-
-    .menu-btn {
-      width: 20px;
-      span,
-      span::before,
-      span::after {
-        height: 2px;
-        background-color: $primary-color;
-      }
-    }
+  @media screen and (max-width: 1440px) {
+    width: 632.16px;
+    justify-content: space-between;
 
     &__btn {
       display: none;
     }
 
+    &__language {
+      margin-left: 350px;
+    }
+
     &__nav {
       display: none;
     }
-  }
-  @media screen and (max-width: 768px) {
+
+    &__link {
+      font-weight: 500;
+      font-size: 24px;
+    }
+
     .menu-btn {
-      width: 20px;
       span,
       span::before,
       span::after {
-        height: 2px;
-      }
-    }
-
-    &__menu {
-      @keyframes showAnimation {
-        0% {
-          opacity: 0;
-        }
+        width: 27px;
+        height: 3.54px;
+        background-color: $primary-color;
       }
     }
   }
 
-  @media screen and (max-width: $breakpointSmall) {
-    .menu-btn {
-      width: 20px;
+
+  //Hiden Menu
+  &__menu {
+    display: none;
+    background: #FFFFFF;
+    text-align: center;
+
+    &--visible {
+      display: block;
     }
 
-    .menu-btn--ml {
-      margin-left: 10px;
-    }
+    &__nav {
+      margin-left: -20px;
+      margin-top: 152.39px;
 
-    &__logo-img {
-      height: 70%;
+      li {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 278px;
+
+    &__language {
+      margin-left: 20px;
     }
   }
 }
