@@ -12,7 +12,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 35px;
-  margin-bottom: 20px;
 
   &__logo {
     width: 130.6px;
@@ -78,7 +77,7 @@
     opacity: 1;
   }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     width: 632.16px;
     justify-content: space-between;
 
@@ -127,11 +126,12 @@
 
       li {
         margin-bottom: 32px;
+        color: #555E68;
       }
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     width: 278px;
 
     &__language {

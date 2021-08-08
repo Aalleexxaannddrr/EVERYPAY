@@ -33,23 +33,23 @@ const Slider: React.FC = () => {
     }
 
     return(
-        <div className="wrapper">
+        <div className="slider-container">
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-            <div className="review-slider">
-                <Swiper
-                    spaceBetween={5}
-                    pagination={{
-                        "clickable": true,
-                    }}
-                >
-                    {SLIDER_CONTENT.map((slide) => (
-                        <SwiperSlide key={slide.id}>
-                            <div className="review-item">
-                                <div className="review-item__left">
-                                    <h3 className="null review-item__titles">
-                                        {(language.language === 'EN') ? slide.titleEN: slide.title}</h3>
-                                    <p className="null review-item__text">
-                                        {(language.language === 'EN') ? slide.descriptionEN : slide.description}</p>
+            <Swiper
+                spaceBetween={5}
+                pagination={{
+                    "clickable": true,
+                }}
+            >
+                {SLIDER_CONTENT.map((slide) => (
+                    <SwiperSlide key={slide.id}>
+                        <div className={"slide-"+slide.id}>
+                            <div className={"slide-"+slide.id+"__left"}>
+                                <h3 className={"slide-"+slide.id+"__left--title"}>
+                                    {(language.language === 'EN') ? slide.titleEN: slide.title}</h3>
+                                <p className={"slide-"+slide.id+"__left--description"}>
+                                    {(language.language === 'EN') ? slide.descriptionEN : slide.description}</p>
+                                <div className="slider-input">
                                     {check ?
                                         <div className="input input--checked">
                                             <i className="material-icons">check</i>
@@ -61,7 +61,7 @@ const Slider: React.FC = () => {
                                                 type="text"
                                                 placeholder={(language.language === 'EN') ? "Enter your email" : "Введите email"}
                                                 name="email"
-                                                className="input input--email"
+                                                className="input input--placeholder"
                                                 value={email}
                                                 onChange={e => setEmail(e.target.value)}
                                             />
@@ -77,12 +77,12 @@ const Slider: React.FC = () => {
                                     }
                                     <p className="warning">{message}</p>
                                 </div>
-                                <img className="review-item__img" src={slide.imgUri} alt="" />
                             </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
+                            <img className={"slide-"+slide.id+"__img"} src={slide.imgUri} alt="" />
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </div>
     )
 }

@@ -25,7 +25,9 @@
     }
 
     &--fill{
-      color: $default-color;
+      font-weight: 600;
+      font-size: 16px;
+      color: #FFFFFF;
     }
   }
 
@@ -43,9 +45,10 @@
   }
 
   &--fill {
-    background: $gradient;
-    border-radius: em(44, $fz);
-    min-width: em(175, $fz);
+    background: linear-gradient(180deg, #1792C7 0%, #00B8F0 100%);;
+    border-radius: 44px;
+    width: 161px;
+    height: 48px;
     border: none;
 
     &--header {

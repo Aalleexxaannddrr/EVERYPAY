@@ -2,19 +2,36 @@
   display: flex;
   justify-content: space-between;
   border: none;
-  border-radius: em(44, $fz);
-  background-color: $input-color;
+  border-radius: 44px;
+  background-color: #F3F9FF;
   font-weight: 400;
   font-size: em($fz, $fz_base);
+
+
+  &--form {
+    height: 48px;
+    width: 440px;
+  }
+
+  &--placeholder {
+    margin-left: 20px;
+    width: 279px;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      color: #1792C7;
+      opacity: 0.6;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
 
   &--checked {
     justify-content: center;
     align-items: center;
-  }
-
-  &--form {
-    max-height: 48px;
-    max-width: 440px;
   }
 
   &--form2 {
@@ -26,18 +43,6 @@
     &__tariffs {
       background-color: $input-color;
       border: none;
-    }
-  }
-
-  &--email {
-    padding: em(15, $fz) em(30, $fz);
-
-    &::placeholder {
-      color: $primary-color-second;
-    }
-
-    &:focus {
-      outline: none;
     }
   }
 
@@ -96,9 +101,6 @@
   }
 
   @media screen and (max-width: 320px){
-    &--form {
-      display: none;
-    }
 
     &--email2 {
       max-width: 120px;
