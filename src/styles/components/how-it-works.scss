@@ -1,0 +1,133 @@
+.how-it-works-container {
+  width: 1094px;
+  height: 373px;
+  margin-top: 160px;
+  margin-left: 171px;
+  margin-right: 175px;
+}
+
+.how-it-works {
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    color: #2D3238;
+  }
+
+  &__wrapper {
+    width: 1094px;
+    height: 237px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+  }
+
+  &__item {
+    width: 346px;
+    height: 237px;
+    text-align: center;
+
+    &--img1 {
+      width: 226.79px;
+      height: 138.77px;
+    }
+
+    &--img2 {
+      width: 239.09px;
+      height: 127.29px;
+    }
+
+    &--img3 {
+      width: 122.83px;
+      height: 137.23px;
+    }
+
+    &--text {
+      margin-right: auto;
+      margin-left: auto;
+      width: 230px;
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .how-it-works-container {
+    width: 640px;
+    height: 283.19px;
+    margin-top: 130.14px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .how-it-works {
+    &__title {
+      text-align: center;
+    }
+
+    &__wrapper {
+      width: 640px;
+      height: 167.19px;
+      margin-top: 70px;
+    }
+
+    &__item {
+      width: 200px;
+      height: 167px;
+
+      &--img1 {
+        width: 147.9px;
+        height: 90.5px;
+      }
+
+      &--img2 {
+        width: 168.12px;
+        height: 89.5px;
+      }
+
+      &--img3 {
+        width: 88.16px;
+        height: 98.5px;
+      }
+
+      &--text {
+        width: 200px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .how-it-works-container {
+    width: 278px;
+    height: 650px;
+    margin-top: 104.78px;
+  }
+
+  .how-it-works {
+    &__title {
+      font-size: 32px;
+      width: 200px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &__wrapper {
+      width: 200px;
+      height: 534px;
+      flex-direction: column;
+      margin-top: 40px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &__item {
+      height: 149px;
+
+      &--text {
+        width: 200px;
+      }
+    }
+  }
+}

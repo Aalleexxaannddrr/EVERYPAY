@@ -1,0 +1,11 @@
+.lines {
+  width: 347.41px;
+  height: 419.11px;
+  position: absolute;
+  top: 1495.92px;
+  z-index: -10;
+
+  @media screen and (max-width: 1439px) {
+    display: none;
+  }
+}
