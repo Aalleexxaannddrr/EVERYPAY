@@ -10,6 +10,7 @@ import Tariffs from "../Tariffs";
 import Safety from "../Safety";
 import Connect from "../Connect";
 import Automate from "../Automate";
+import Banks from "../Banks";
 
 const Page: React.FC = () => {
     const language = useContext(LanguageContext)
@@ -27,49 +28,7 @@ const Page: React.FC = () => {
                     <HowItWorks />
                 </section>
                 <Automate />
-                <h3 className="null hiw__titles">
-                    {language.language === 'EN' ? 'Banks and integrations' : 'Банки и интеграции'}
-                </h3>
-                <div>
-                    <div className="hiw hiw__bi">
-                        <div className="banks">
-                            <p className="banks__title">
-                                {language.language === 'EN' ? 'Banks' : 'Банки'}
-                            </p>
-                            <div className="banks__img-container">
-                                <img className="banks__img" src="/img/how_it_works/banks/1.png" alt="" />
-                            </div>
-                            <div className="banks__img-container">
-                                <img className="banks__img" src="/img/how_it_works/banks/2.png" alt="" />
-                            </div>
-                            <div className="banks__img-container">
-                                <img className="banks__img" src="/img/how_it_works/banks/3.png" alt="" />
-                            </div>
-                            <hr className="banks__hr" />
-                            <div className="banks__img-container">
-                                <img className="banks__img" src="/img/how_it_works/banks/4.png" alt="" />
-                                {language.language === 'EN' ? <p>Loading from <b>1C</b></p> : <p>Загрузка из <b>1C</b></p>}
-                            </div>
-                        </div>
-                        <div className="integrations">
-                            <p className="integrations__title">
-                                {language.language === 'EN' ? 'Integrations' : 'Интеграции'}
-                            </p>
-                            <div className="banks__img-container">
-                                <img className="integrations__img" src="/img/how_it_works/integrations/1.png" alt="" />
-                                {language.language === 'EN' ? <p>Push-web notifications</p> : <p>Push-web уведомления</p>}
-                            </div>
-                            <div className="banks__img-container">
-                                <img className="integrations__img" src="/img/how_it_works/integrations/2.png" alt="" />
-                                {language.language === 'EN' ? <p>E-mail notifications</p> : <p>E-mail уведомления</p>}
-                            </div>
-                            <div className="banks__img-container">
-                                <img className="integrations__img" src="/img/how_it_works/integrations/3.png" alt="" />
-                                <p>Telegram</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Banks />
                 <section className="for-whom">
                     <ForWhom />
                 </section>

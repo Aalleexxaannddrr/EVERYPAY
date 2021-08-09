@@ -1,0 +1,270 @@
+.banks {
+  width: 1098px;
+  height: 556px;
+  margin-top: 140px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__title {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 40px;
+    color: #2D3238;
+  }
+
+  &__wrapper {
+    width: 1098px;
+    height: 420px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+  }
+
+  &__item {
+    width: 534px;
+    height: 420px;
+    border: 1px solid rgba(56, 152, 254, 0.187528);
+    margin-left: 0;
+    margin-right: 0;
+
+    &__title {
+      font-weight: 400;
+      font-size: 18px;
+      color: rgba(56, 152, 254, 0.5);
+      margin-left: 45px;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+
+    &__img-container {
+      display: flex;
+      margin: 0;
+
+      &__dot {
+        width: 171.49px;
+        height: 110.05px;
+        margin-top: 20px;
+        margin-left: 40px;
+        margin-right: 0;
+      }
+
+      &__tinkoff {
+        width: 195.27px;
+        height: 93.73px;
+        margin-top: 28.02px;
+        margin-left: 40px;
+      }
+
+      &__modul {
+        width: 173px;
+        height: 100px;
+        margin-top: -5px;
+        margin-left: 40px;
+        margin-bottom: 18.3px;
+      }
+
+      &__plus {
+        width: 24px;
+        height: 24px;
+        margin-top: 54.83px;
+        margin-left: 40px;
+        margin-right: 0;
+      }
+
+      &__csv {
+        width: 55px;
+        height: 55px;
+        margin-top: 37.33px;
+        margin-left: 10px;
+      }
+
+      &__text {
+        font-weight: 400;
+        font-size: 18px;
+        margin-top: 52.83px;
+      }
+
+      &__push {
+        width: 73.66px;
+        height: 73.66px;
+        margin-top: 36px;
+        margin-left: 40px;
+
+        &__text {
+          margin-top: 59px;
+          margin-left: 30px;
+        }
+      }
+
+      &__email {
+        width: 72.85px;
+        height: 72.85px;
+        margin-top: 39px;
+        margin-left: 40px;
+
+        &__text {
+          margin-top: 70px;
+          margin-left: 33px;
+        }
+      }
+
+      &__telegram {
+        width: 72.85px;
+        height: 72.85px;
+        margin-top: 37px;
+        margin-left: 40px;
+
+        &__text {
+          margin-top: 65px;
+          margin-left: 33px;
+        }
+      }
+    }
+
+    &__hr {
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 454px;
+      height: 1px;
+      border: none;
+      background: linear-gradient(180deg, #1792C7 0%, #00B8F0 100%);
+      opacity: 0.2;
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .banks {
+    width: 536px;
+    height: 996px;
+    margin-top: 110px;
+
+    &__title {
+      text-align: center;
+    }
+
+    &__wrapper {
+      width: 534px;
+      height: 880px;
+      flex-direction: column;
+      margin-top: 70px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banks {
+    width: 278px;
+    height: 681px;
+    margin-top: 141px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__title {
+      font-size: 38px;
+    }
+
+    &__wrapper {
+      width: 278px;
+      height: 565px;
+      margin-top: 40px;
+    }
+
+    &__item {
+      width: 278px;
+      height: 279px;
+
+      &__integrations {
+        height: 256px;
+      }
+
+      &__title {
+        margin-left: 16px;
+      }
+
+      &__img-container {
+
+        &__dot {
+          width: 110.4px;
+          height: 73.2px;
+          margin-top: 6.36px;
+          margin-left: 19.19px;
+        }
+
+        &__tinkoff {
+          width: 116.73px;
+          height: 60.94px;
+          margin-top: 10.02px;
+          margin-left: 20.4px;
+        }
+
+        &__modul {
+          width: 109.65px;
+          height: 65.55px;
+          margin-top: -15px;
+          margin-left: 21.75px;
+          margin-bottom: 10px;
+        }
+
+        &__plus {
+          margin-top: 31.5px;
+          margin-left: 11px;
+        }
+
+        &__csv {
+          margin-top: 16px;
+        }
+
+        &__text {
+          margin-top: 34.5px;
+        }
+
+        &__push {
+          width: 40px;
+          height: 40px;
+          margin-top: 28px;
+          margin-left: 16px;
+
+          &__text {
+            margin-top: 36px;
+            margin-left: 14px;
+          }
+        }
+
+        &__email {
+          width: 40px;
+          height: 40px;
+          margin-top: 22px;
+          margin-left: 16px;
+
+          &__text {
+            margin-top: 32px;
+            margin-left: 16px;
+          }
+        }
+
+        &__telegram {
+          width: 40px;
+          height: 40px;
+          margin-top: 21px;
+          margin-left: 16px;
+
+          &__text {
+            margin-top: 32px;
+            margin-left: 16px;
+          }
+        }
+      }
+
+      &__hr {
+        width: 247px;
+        height: 1px;
+        border: none;
+        background: linear-gradient(180deg, #1792C7 0%, #00B8F0 100%);
+        opacity: 0.2;
+      }
+    }
+  }
+}
