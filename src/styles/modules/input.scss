@@ -11,6 +11,17 @@
   &--form {
     height: 48px;
     width: 440px;
+
+    &--automate {
+      height: 48px;
+      width: 440px;
+      background-color: #FFFFFF;
+      border: 1px solid rgba(56, 152, 254, 0.4);
+
+      @media screen and (max-width: 767px) {
+        width: 279px;
+      }
+    }
   }
 
   &--placeholder {
@@ -26,6 +37,27 @@
 
     &:focus {
       outline: none;
+    }
+
+    &--automate {
+      margin-left: 20px;
+      width: 279px;
+      background-color: #FFFFFF;
+
+      &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        color: #1792C7;
+        opacity: 0.6;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 151px;
+      }
     }
   }
 
