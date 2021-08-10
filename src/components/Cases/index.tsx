@@ -10,50 +10,56 @@ const Cases: React.FC = () => {
     const language = useContext(LanguageContext)
 
     return (
-        <div>
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-            <h3 className="null hiw__titles">
+        <div className="cases">
+            <h3 className="cases__title">
                 {language.language === 'EN' ? 'Cases' : 'Кейсы'}
             </h3>
-            <div className="cases">
+            <div className="cases__wrapper">
                 <Swiper
-                    spaceBetween={20}
                     loop={true}
+                    slidesPerView={3}
+                    spaceBetween={20}
                     pagination={{
                         clickable: true,
                     }}
+                    freeMode={true}
                     breakpoints={{
-                        320: {
-                            slidesPerView: 1,
-                            slidesPerGroup: 1,
-                        },
-                        790: {
-                            slidesPerView: 2,
-                            slidesPerGroup: 1,
-                        },
-                        1200: {
+                        319: {
                             slidesPerView: 3,
-                            slidesPerGroup: 1,
+                            spaceBetween: 150
                         },
+                        767: {
+                            slidesPerView: 3,
+                            spaceBetween: 180
+                        },
+                        1439: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
                     }}
                 >
                     {CASES_CONTENT.map((cas) => (
                         <SwiperSlide key={cas.id}>
-                            <div className="hiw-item hiw-item__case">
-                                <div className="icons-wrapper">
-                                    <img className="icon" src={cas.img1} alt="" />
-                                    <img className="icon" src={cas.img2} alt="" />
-                                    <img className="icon" src={cas.img3} alt="" />
-                                </div>
-                                <div className="for-whom__text">
-                                    <h3>
+                            <div className="cases-container">
+                                <div className="cases__item">
+                                    <div className={"cases__item__icons"+cas.id}>
+                                        <img className={"cases__item__icons"+cas.id+"--icon1"} src={cas.img1} alt="" />
+                                        <img className={"cases__item__icons"+cas.id+"--icon2"} src={cas.img2} alt="" />
+                                        <img className={"cases__item__icons"+cas.id+"--icon3"} src={cas.img3} alt="" />
+                                    </div>
+                                    <h3 className={"cases__item__title"+cas.id}>
                                         {language.language === 'EN' ? cas.titleEN : cas.title}
                                     </h3>
-                                    <b className="blue-text">
-                                        {language.language === 'EN' ? 'Read the case' : 'Читать кейс'}
-                                        <i className="material-icons material-icons__blue">chevron_right</i>
-                                    </b>
+                                    <div className="cases__item__read">
+                                        <b className="cases__item__read--text">
+                                            {language.language === 'EN' ? 'Read the case' : 'Читать кейс'}
+                                        </b>
+                                        <div>
+                                            <img className="cases__item__read--vector" src="/img/cases/vector.png" alt=""></img>
+                                        </div>
+                                    </div>
                                 </div>
+                                {/*<div className="bottom"></div>*/}
                             </div>
                         </SwiperSlide>
                         ))}
