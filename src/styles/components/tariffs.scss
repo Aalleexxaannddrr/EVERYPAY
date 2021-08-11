@@ -1,0 +1,155 @@
+.tariffs {
+  width: 1072px;
+  height: 473px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 116px;
+
+  &__container {
+    width: 1072px;
+    height: 473px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    width: 564px;
+    height: 400px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    color: #2D3238;
+    margin-top: 0;
+
+    &__hidden {
+      display: none;
+    }
+  }
+
+  &__description {
+    width: 510px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #2D3238;
+    margin-top: 28px;
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    margin-top: -30px;
+    width: 461px;
+    height: 473px;
+  }
+
+  &__input {
+    &__hidden {
+      width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .tariffs {
+    width: 640px;
+    height: 430px;
+    margin-top: 112.16px;
+
+    &__container {
+      width: 640px;
+      height: 264px;
+      margin-top: 50.04px;
+    }
+
+    &__left {
+      width: 383px;
+      height: 224px;
+    }
+
+    &__title {
+      text-align: center;
+
+      &__unhidden {
+        display: none;
+      }
+
+      &__hidden {
+        display: block;
+      }
+    }
+
+    &__description {
+      width: 365px;
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+
+    &__img {
+      width: 257px;
+      height: 264px;
+    }
+
+    &__input {
+      &__unhidden {
+        display: none;
+      }
+      
+      &__hidden {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tariffs {
+    width: 278px;
+    height: 598.15px;
+    margin-top: 73px;
+
+    &__container {
+      width: 278px;
+      height: 598.15px;
+      margin-top: 0;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &__left {
+      width: 278px;
+      height: 358px;
+    }
+
+    &__title {
+
+      &__unhidden {
+        display: block;
+      }
+
+      &__hidden {
+        display: none;
+      }
+    }
+
+    &__description {
+      width: 270px;
+      margin-top: 40px;
+    }
+
+    &__img {
+      width: 189.83px;
+      height: 195px;
+    }
+
+    &__input {
+      &__hidden {
+        width: 279px;
+      }
+    }
+  }
+}

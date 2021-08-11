@@ -28,30 +28,30 @@ const Tariffs: React.FC = () => {
     }
 
     return (
-        <div>
-            <h3 className="null review-item__titles review-item__titles--tariffs1">
+        <div className="tariffs">
+            <h3 className="tariffs__title tariffs__title__hidden">
                 {(language.language === 'EN') ?
                     "Tariffs" :
                     "Тарифы"}
             </h3>
-            <div className="review-item review-item__tariffs">
-                <div className="review-item__left">
-                    <h3 className="null review-item__titles review-item__titles--tariffs2">
+            <div className="tariffs__container">
+                <div className="tariffs__left">
+                    <h3 className="tariffs__title tariffs__title__unhidden">
                         {(language.language === 'EN') ?
                             "Tariffs" :
                             "Тарифы"}
                     </h3>
-                    <p className="null review-item__text2">
+                    <p className="tariffs__description">
                         {(language.language === 'EN') ?
                             "Everypay is in the stage of a hidden beta test, but you have the opportunity to join the testing of the service." :
-                            "Everypay находится в стадии скрытого beta-теста, но у вас есть возможность присоединиться к тестированию сервиса."}
+                            "Everypay находится в стадии закрытого beta-теста, но у вас есть возможность присоединиться к тестированию сервиса."}
                     </p>
-                    <p className="null review-item__text2">
+                    <p className="tariffs__description">
                         {(language.language === 'EN') ?
                             "For companies participating in testing, the service is forever free. Write to us and we will contact you." :
                             "Для компаний, участвующих в тестировании, сервис навсегда бесплатен. Напишите нам и мы с вами свяжемся."}
                     </p>
-                    <div className="input__big">
+                    <div className="tariffs__input__unhidden">
                         {check ?
                             <div className="input input--checked">
                                 <i className="material-icons">check</i>
@@ -63,7 +63,7 @@ const Tariffs: React.FC = () => {
                                     type="text"
                                     placeholder={(language.language === 'EN') ? "Enter your email" : "Введите email"}
                                     name="email"
-                                    className="input input--email"
+                                    className="input input--placeholder"
                                     value={email}
                                     onChange={e => setEmail(e.target.value)}
                                 />
@@ -80,20 +80,20 @@ const Tariffs: React.FC = () => {
                         <p className="warning">{message}</p>
                     </div>
                 </div>
-                <img className="review-item__img2 review-item__img2--tariffs" src="/img/tariffs/1.png" alt="" />
+                <img className="tariffs__img" src="/img/tariffs/1.png" alt="" />
             </div>
-            <div className="input__small">
+            <div className="tariffs__input__hidden">
                 {check ?
                     <div className="input input--checked">
                         <i className="material-icons">check</i>
                         <p>Проверьте e-mail!</p>
                     </div> :
-                    <div className="input input--form2__tariffs">
+                    <div className="input input--form input--form--tariffs">
                         <input
                             type="text"
                             placeholder={(language.language === 'EN') ? "Enter your email" : "Введите email"}
                             name="email"
-                            className="input input--email"
+                            className="input input--placeholder input--placeholder--tariffs"
                             value={email}
                             onChange={e => setEmail(e.target.value)}
                         />
@@ -108,82 +108,6 @@ const Tariffs: React.FC = () => {
                     </div>
                 }
                 <p className="warning">{message}</p>
-            </div>
-            <div className="soon">
-                <h3 className="null hiw__titles">
-                    {(language.language === 'EN') ?
-                        "Coming soon" :
-                        "Скоро появится"}
-                </h3>
-                <div className="review-item review-item">
-                    <h3 className="null review-item__titles4">
-                        {(language.language === 'EN') ?
-                            "Integration with CRM systems Bitrix24 and amoCRM" :
-                            "Интеграции с CRM-системами Битрикс24 и amoCRM"}
-                    </h3>
-                    <div className="soon-right">
-                        <div className="soon-line">
-                            <hr className="line" />
-                        </div>
-                        <div className="review-item__left">
-                            <p className="null review-item__text2">
-                                {(language.language === 'EN') ?
-                                    "We offer you a simple tool to automate the notification of incoming payments" :
-                                    "Интегрируйте уведомления о платежах прямо в вашу CRM, в которой работают ваши сотрудники"}
-                            </p>
-                            <div className="icons-wrapper">
-                                <img className="icon" src="/img/cases/bitrix.png" alt="" />
-                                <img className="icon" src="/img/cases/amoCRM.png" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr className="soon-sep" />
-                <div className="review-item review-item">
-                    <h3 className="null review-item__titles4">
-                        {(language.language === 'EN') ?
-                            "Open API Everypay" :
-                            "Открытое API Everypay"}
-                    </h3>
-                    <div className="soon-right">
-                        <div className="soon-line">
-                            <hr className="line" />
-                        </div>
-                        <div className="review-item__left">
-                            <p className="null review-item__text2">
-                                {(language.language === 'EN') ?
-                                    "Connect your systems and integrate payment notifications yourself using the simple Everypay API" :
-                                    "Подключайте свои системы и интегрируйте уведомления о поступающих платежах самостоятельно с помощью простого API Everypay"}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <hr className="soon-sep" />
-                <div className="review-item review-item">
-                    <h3 className="null review-item__titles4">
-                        {(language.language === 'EN') ?
-                            "Automatic creation of payments" :
-                            "Автоматическое создание платежек"}
-                    </h3>
-                    <div className="soon-right">
-                        <div className="soon-line">
-                            <hr className="line" />
-                        </div>
-                        <div className="review-item__left">
-                            <p className="null review-item__text2">
-                                {(language.language === 'EN') ?
-                                    "Upload the scanned invoice for payment to our system and a payment order will be automatically created in the client bank based on the data from the invoice. With the help of computer vision and machine learning technologies, we achieve high accuracy and speed of work" :
-                                    "Загрузите скан счета на оплату в нашу систему и в банк-клиенте автоматически будет создано платежное поручение на основании данных из счета. С помощью технологий компьютерного зрения и машинного обучения мы достигаем высокой точности и скорости работы"}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <hr className="soon-sep" />
-                <h3 className="soon-more">
-                    {(language.language === 'EN') ?
-                        "And 17 more innovations" :
-                        "И еще 17 нововведений"}
-                </h3>
             </div>
         </div>
     )

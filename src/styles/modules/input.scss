@@ -22,6 +22,12 @@
         width: 279px;
       }
     }
+
+    &--tariffs {
+      @media screen and (max-width: 767px) {
+        width: 279px;
+      }
+    }
   }
 
   &--placeholder {
@@ -55,6 +61,12 @@
         outline: none;
       }
 
+      @media screen and (max-width: 767px) {
+        width: 151px;
+      }
+    }
+
+    &--tariffs {
       @media screen and (max-width: 767px) {
         width: 151px;
       }
