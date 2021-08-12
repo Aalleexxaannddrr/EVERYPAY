@@ -30,18 +30,18 @@ const Connect: React.FC = () => {
     }
 
     return (
-        <div>
-                <h3 className="null review-item__titles review-item__titles--left">
-                    {(language.language === 'EN') ? "Connect": "Подключиться"}
-                </h3>
-            <div className="review-item">
-                <div className="review-item__left review-item__left__connect">
-                    <p className="null review-item__text">
+        <div className="connect__container">
+            <h3 className="connect__title">
+                {(language.language === 'EN') ? "Connect": "Подключиться"}
+            </h3>
+            <div className="connect__item">
+                <div className="connect__item__description">
+                    <p className="connect__item__description__text">
                         {(language.language === 'EN') ? "Do you want to start using the system? Write to us." :
                             "Хотите начать пользоваться системой? Напишите нам."}
                     </p>
-                    <p className="null review-item__text review-item__text__blue">email</p>
-                    <p className="null review-item__text">hello@everypay.io</p>
+                    <p className="connect__item__description__email">email</p>
+                    <p className="connect__item__description__contact">hello@everypay.io</p>
                 </div>
                 {check ?
                     <div className="checked">
@@ -62,7 +62,7 @@ const Connect: React.FC = () => {
                                 </p>
                             </> }
                     </div> :
-                    <div>
+                    <div className="connect__item__form">
                         <input
                             type="text"
                             placeholder={(language.language === 'EN') ? "Your name*" : "Ваше имя*"}
@@ -89,7 +89,7 @@ const Connect: React.FC = () => {
                         />
                         <p className="warning">{message}</p>
                         <button
-                            className="btn btn--fill"
+                            className="btn btn--fill btn--fill--connect"
                             onClick={() => handleClickConnectBtn(name, email, info)}
                         >
                             <span className="btn__label--fill">
