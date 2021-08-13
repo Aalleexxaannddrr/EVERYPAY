@@ -20,6 +20,7 @@ const Page: React.FC = () => {
         <div className="page">
             <Fragment>
                 <img className="lines" src="/img/lines.png" />
+                <img className="lines lines__footer" src="/img/lines.png" />
                 <section className="navbar">
                     <Header />
                 </section>
