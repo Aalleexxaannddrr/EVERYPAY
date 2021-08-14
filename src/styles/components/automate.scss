@@ -11,6 +11,8 @@
   &__title {
     font-weight: 700;
     font-size: 40px;
+    letter-spacing: 0.99px;
+    line-height: 46px;
     color: #2D3238;
     margin-top: 59.85px;
     margin-left: 94px;
@@ -25,6 +27,8 @@
     &--text {
       font-weight: 400;
       font-size: 18px;
+      letter-spacing: 0.44px;
+      line-height: 28px;
       margin-bottom: 60.15px;
     }
   }
@@ -76,6 +80,8 @@
 
     &__title {
       font-size: 28px;
+      letter-spacing: 0.44px;
+      line-height: 36px;
       margin-left: auto;
       margin-right: auto;
     }

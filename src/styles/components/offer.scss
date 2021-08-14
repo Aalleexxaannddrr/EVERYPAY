@@ -15,11 +15,13 @@
   &__right {
     width: 534px;
     height: 252px;
-    margin-top: 64.15px;
+    margin-top: 50.15px;
 
     &--title {
       font-weight: 600;
       font-size: 28px;
+      letter-spacing: 0.44px;
+      line-height: 36px;
       color: #2D3238;
       margin-bottom: 0;
     }
@@ -27,6 +29,8 @@
     &--description {
       font-weight: 400;
       font-size: 18px;
+      letter-spacing: 0.44px;
+      line-height: 28px;
       color: #2D3238;
       margin-top: 24px;
     }
@@ -70,6 +74,7 @@
     }
 
     &__img {
+      margin-top: 30px;
       width: 320px;
       height: 200.39px;
     }

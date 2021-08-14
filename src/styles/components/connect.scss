@@ -11,6 +11,7 @@
   &__title {
     font-weight: 700;
     font-size: 40px;
+    letter-spacing: 0.99px;
     color: #2D3238;
     padding-top: 79.58px;
   }
@@ -29,6 +30,8 @@
       &__text {
         font-weight: 400;
         font-size: 24px;
+        line-height: 34px;
+        letter-spacing: 0.71px;
         margin-top: 0;
         margin-bottom: 0;
         color: #2D3238;
@@ -37,6 +40,8 @@
       &__email {
         font-weight: 400;
         font-size: 24px;
+        line-height: 34px;
+        letter-spacing: 0.71px;
         margin-top: 18px;
         margin-bottom: 0;
         color: rgba(56, 152, 254, 0.3);
@@ -45,6 +50,8 @@
       &__contact {
         font-weight: 400;
         font-size: 24px;
+        line-height: 34px;
+        letter-spacing: 0.71px;
         margin-top: 0;
         color: #2D3238;
       }
@@ -120,15 +127,21 @@
 
         &__text {
           font-size: 18px;
+          line-height: 28px;
+          letter-spacing: 0.44px;
         }
 
         &__email {
           font-size: 18px;
+          line-height: 28px;
+          letter-spacing: 0.44px;
           margin-top: 20px;
         }
 
         &__contact {
           font-size: 18px;
+          line-height: 28px;
+          letter-spacing: 0.44px;
         }
       }
 

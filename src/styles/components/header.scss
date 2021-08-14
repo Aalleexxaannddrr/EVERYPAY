@@ -1,13 +1,14 @@
 .header-wrapper {
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   background: #FFFFFF;
 }
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  max-width: 1098px;
+  width: 1098px;
   max-height: 48px;
   margin-left: auto;
   margin-right: auto;
@@ -19,6 +20,7 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    padding-left: 0;
   }
 
   &__logo-img {
@@ -27,6 +29,7 @@
 
   &__list {
     display: flex;
+    width: 640px;
   }
 
   &__item {
@@ -37,10 +40,12 @@
   &__link {
     font-weight: 400;
     font-size: 14px;
+    letter-spacing: 0.96px;
     background: transparent;
     border: none;
     cursor: pointer;
     color: #2D3238;
+    padding-left: 0;
 
     &:hover {
       color: #1792C7;
@@ -53,6 +58,7 @@
 
   &__language {
     display: flex;
+    margin-left: 54.84px;
   }
 
   &__language-btn {
@@ -62,6 +68,7 @@
     font-weight: 400;
     font-size: 16px;
     color: #2D3238;
+    letter-spacing: 0.96px;
     opacity: 0.5;
 
     &:hover {
@@ -110,11 +117,12 @@
   }
 
 
-  //Hiden Menu
+  //Hidden Menu
   &__menu {
     display: none;
     background: #FFFFFF;
     text-align: center;
+    margin-left: -50px;
 
     &--visible {
       display: block;

@@ -8,6 +8,7 @@
   &__title {
     font-weight: 700;
     font-size: 40px;
+    letter-spacing: 0.99px;
     color: #2D3238;
     padding-bottom: 40px;
   }
@@ -37,6 +38,8 @@
       width: 439px;
       font-weight: 500;
       font-size: 28px;
+      letter-spacing: 0.44px;
+      line-height: 36px;
       color: #2D3238;
       margin-top: 0;
     }
@@ -66,10 +69,12 @@
       }
 
       &__text {
-        width: 410px;
-        margin-top: 4px;
+        width: 438.54px;
+        margin-top: 0;
         font-weight: 400;
         font-size: 18px;
+        letter-spacing: 0.44px;
+        line-height: 28px;
         color: #2D3238;
       }
 
@@ -100,13 +105,14 @@
     border: none;
     background: linear-gradient(180deg, #1792C7 0%, #00B8F0 100%);
     opacity: 0.2;
-    margin-top: 20px;
+    margin-top: 70px;
   }
 
   &__more {
     text-align: center;
     font-weight: 600;
     font-size: 22px;
+    letter-spacing: 0.44px;
     margin-top: 40px;
     margin-bottom: 0;
     color: #2D3238;
@@ -163,7 +169,7 @@
         }
 
         &__text {
-          width: 320px;
+          width: 362px;
         }
 
         &__icons {
@@ -186,7 +192,7 @@
   .soon {
     width: 278px;
     height: 1002px;
-    margin-top: 96.85px;
+    margin-top: 200px;
 
     &__title {
       font-size: 32px;
@@ -194,27 +200,28 @@
     }
 
     &__item {
-      width: 278px;
+      width: 320px;
       margin-top: 30px;
 
       &--1 {
-        height: 210px;
+        height: 200px;
       }
 
       &--2 {
-        height: 165px;
+        height: 130px;
       }
 
       &--3 {
-        height: 260px;
+        height: 300px;
       }
 
       &__title {
-        width: 193px;
+        width: 244px;
         text-align: left;
         margin-left: 34px;
         font-weight: 600;
         font-size: 18px;
+        line-height: 24px;
       }
 
       &__line {
@@ -228,6 +235,7 @@
         &__text {
           width: 245px;
           font-size: 16px;
+          line-height: 24px;
         }
 
         &__icons {

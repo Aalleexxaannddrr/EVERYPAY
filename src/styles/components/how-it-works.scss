@@ -10,6 +10,7 @@
   &__title {
     font-weight: 700;
     font-size: 40px;
+    letter-spacing: 0.99px;
     color: #2D3238;
   }
 
@@ -47,6 +48,8 @@
       width: 230px;
       font-weight: 400;
       font-size: 18px;
+      letter-spacing: 0.44px;
+      line-height: 28px;
     }
   }
 }
@@ -78,21 +81,25 @@
       &--img1 {
         width: 147.9px;
         height: 90.5px;
+        margin-bottom: 21.5px;
       }
 
       &--img2 {
         width: 168.12px;
         height: 89.5px;
+        margin-bottom: 26px;
       }
 
       &--img3 {
         width: 88.16px;
         height: 98.5px;
+        margin-bottom: 18.5px;
       }
 
       &--text {
-        width: 200px;
+        width: 220px;
         font-size: 16px;
+        line-height: 24px;
       }
     }
   }
@@ -125,8 +132,20 @@
     &__item {
       height: 149px;
 
+      &--img1 {
+        margin-bottom: 10px;
+      }
+
+      &--img2 {
+        margin-bottom: 10px;
+      }
+
+      &--img3 {
+        margin-bottom: 10px;
+      }
+
       &--text {
-        width: 200px;
+        width: 220px;
       }
     }
   }

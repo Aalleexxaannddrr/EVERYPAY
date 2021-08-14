@@ -38,7 +38,7 @@
       font-weight: 400;
       font-size: 16px;
       color: #1792C7;
-      opacity: 0.6;
+      opacity: 0.4;
     }
 
     &:focus {
@@ -126,8 +126,7 @@
   }
 
   &--textarea {
-    background-color: $default-color;
-    padding: em(15, $fz) em(30, $fz);
+    background-color: #FFFFFF;
     border: 1px solid rgba(56, 152, 254, 0.4);
     min-height: 68px;
     width: 440px;
@@ -136,6 +135,8 @@
     margin-bottom: 20px;
 
     &::placeholder {
+      padding-left: 20px;
+      padding-top: 10px;
       color: #1792C7;
       opacity: 0.6;
     }
