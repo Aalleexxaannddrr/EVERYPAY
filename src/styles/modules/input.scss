@@ -5,7 +5,6 @@
   border-radius: 44px;
   background-color: #F3F9FF;
   font-weight: 400;
-  font-size: em($fz, $fz_base);
 
 
   &--form {
@@ -92,7 +91,6 @@
 
   &--email2 {
     background-color: $default-color;
-    padding: em(15, $fz) em(30, $fz);
 
     &::placeholder {
       color: $primary-color-second;
