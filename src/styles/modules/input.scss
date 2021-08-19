@@ -80,20 +80,20 @@
   &--form2 {
     max-height: 48px;
     max-width: 440px;
-    background-color: $default-color;
+    background-color: #FFFFFF;
     border: 1px solid rgba(56, 152, 254, 0.4);
 
     &__tariffs {
-      background-color: $input-color;
+      background-color: #F3F9FF;
       border: none;
     }
   }
 
   &--email2 {
-    background-color: $default-color;
+    background-color: #FFFFFF;
 
     &::placeholder {
-      color: $primary-color-second;
+      color: #1792C7;
     }
 
     &:focus {
