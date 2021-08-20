@@ -18,19 +18,27 @@ const Page: React.FC = () => {
 
     return(
         <div className="page">
-            <Fragment>
-                <img className="lines" src="/img/lines.png" />
-                <img className="lines lines__footer" src="/img/lines.png" />
-                <section className="navbar">
-                    <Header />
+            <img className="lines" src="/img/lines.png" />
+            <img className="lines lines__footer" src="/img/lines.png" />
+            <section className="navbar">
+                <Header />
+            </section>
+            <main>
+                <section className="slider">
+                    <Slider />
                 </section>
-                <Slider />
-                <Offer />
+                <section className="offer_section">
+                    <Offer />
+                </section>
                 <section className="how-it-works">
                     <HowItWorks />
                 </section>
-                <Automate />
-                <Banks />
+                <section className="automate_section">
+                    <Automate />
+                </section>
+                <section className="banks_and_integrations">
+                    <Banks />
+                </section>
                 <section className="for-whom">
                     <ForWhom />
                 </section>
@@ -40,22 +48,26 @@ const Page: React.FC = () => {
                 <section className="tariffs">
                     <Tariffs />
                 </section>
-                <Soon />
+                <section className="soon_section">
+                    <Soon />
+                </section>
                 <section className="safety">
                     <Safety />
                 </section>
                 <section className="connect">
-                    <Connect />
-                    <div className="footer">
-                        <p className="footer__text1">© 2020, Everypay</p>
-                        <p className="footer__text2">
-                            {(language.language === 'EN') ?
-                                "Privacy Policy" :
-                                "Политика конфиденциальности"}
-                        </p>
-                    </div>
+                    <footer>
+                        <Connect />
+                        <div className="footer">
+                            <p className="footer__text1">© 2020, Everypay</p>
+                            <p className="footer__text2">
+                                {(language.language === 'EN') ?
+                                    "Privacy Policy" :
+                                    "Политика конфиденциальности"}
+                            </p>
+                        </div>
+                    </footer>
                 </section>
-            </Fragment>
+            </main>
         </div>
     )
 }

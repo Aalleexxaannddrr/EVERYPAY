@@ -41,7 +41,11 @@ const Connect: React.FC = () => {
                             "Хотите начать пользоваться системой? Напишите нам."}
                     </p>
                     <p className="connect__item__description__email">email</p>
-                    <p className="connect__item__description__contact">hello@everypay.io</p>
+                    <p className="connect__item__description__contact">
+                        <a className="connect__item__description__contact" href="mailto:hello@everypay.io">
+                            hello@everypay.io
+                        </a>
+                    </p>
                 </div>
                 {check ?
                     <div className="checked">
